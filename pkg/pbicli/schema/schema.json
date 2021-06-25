@@ -4,40 +4,40 @@
     "installStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "pbicli": {"$ref": "#/definitions/pbicli"}
       },
       "required": [
-        "skeletor"
+        "pbicli"
       ],
       "additionalProperties": false
     },
     "upgradeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "pbicli": {"$ref": "#/definitions/pbicli"}
       },
       "required": [
-        "skeletor"
+        "pbicli"
       ],
       "additionalProperties": false
     },
     "invokeStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "pbicli": {"$ref": "#/definitions/pbicli"}
       },
       "required": [
-        "skeletor"
+        "pbicli"
       ],
       "additionalProperties": false
     },
     "uninstallStep": {
       "type": "object",
       "properties": {
-        "skeletor": {"$ref": "#/definitions/skeletor"}
+        "pbicli": {"$ref": "#/definitions/pbicli"}
       },
       "required": [
-        "skeletor"
+        "pbicli"
       ],
       "additionalProperties": false
     },
@@ -74,7 +74,7 @@
         ]
       }
     },
-    "skeletor": {
+    "pbicli": {
       "type": "object",
       "properties": {
         "description": {

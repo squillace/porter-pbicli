@@ -1,4 +1,4 @@
-package skeletor
+package pbicli
 
 import (
 	"get.porter.sh/porter/pkg/exec/builder"
