@@ -1,6 +1,8 @@
 package pbicli
 
 import (
+	"fmt"
+
 	"get.porter.sh/porter/pkg/exec/builder"
 	yaml "gopkg.in/yaml.v2"
 )
@@ -21,7 +23,7 @@ type MixinConfig struct {
 
 // This is an example. Replace the following with whatever steps are needed to
 // install required components into
-const dockerfileLines = `RUN apt-get update && \
+const dockerfileLines = `RUN apt-get update && apt-get install curl -y && \
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
 apt-get install -y nodejs && \
 npm i -g @powerbi-cli/powerbi-cli`
@@ -47,7 +49,7 @@ func (m *Mixin) Build() error {
 		m.ClientVersion = suppliedClientVersion
 	}
 
-	//fmt.Fprintf(m.Out, dockerfileLines)
+	fmt.Fprintf(m.Out, dockerfileLines)
 
 	// Example of pulling and defining a client version for your mixin
 	// fmt.Fprintf(m.Out, "\nRUN curl https://get.helm.sh/helm-%s-linux-amd64.tar.gz --output helm3.tar.gz", m.ClientVersion)
